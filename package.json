@@ -1,0 +1,21 @@
+{
+  "name": "angular-f1",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "~0.6.2",
+    "gulp": "~3.6.2",
+    "gulp-concat": "~2.2.0",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-replace": "~0.2.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-util": "~2.2.14",
+    "gulp-compass": "^1.1.9"
+  }
+}

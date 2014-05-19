@@ -1,0 +1,38 @@
+<section id="driver">
+  <a href="./#/drivers" title="Home">Back to Drivers List</a>
+
+  <nav>
+    <figure>
+      <img ng-show="driver" ng-src="http://rboaventura.com/f1feeder/images/drivers/{{ driver.Driver.driverId }}.png" alt="{{ driver.Driver.givenName }} {{ driver.Driver.familyName }}" />
+      <img ng-show="driver" ng-src="http://rboaventura.com/f1feeder/images/flags/{{ driver.Driver.nationality }}.png" alt="{{ driver.Driver.nationality }}">
+      <figcaption>{{ driver.Driver.givenName }} {{ driver.Driver.familyName }}</figcaption>
+    </figure>
+  </nav>
+  <ul>
+    <li>Country: {{driver.Driver.nationality}}</li>
+    <li>Team: {{driver.Constructors[0].name}}</li>
+    <li>Birth: {{driver.Driver.dateOfBirth}}</li>
+    <li><a href="{{driver.Driver.url}}" target="_blank">Biography</a></li>
+  </ul>
+</section>
+
+<section id="results">
+  <h1>Formula 1 2014 Results</h1>
+
+  <ul>
+    <li>Round</li>
+    <li>Grand Prix</li>
+    <li>Team</li>
+    <li>Grid</li>
+    <li>Race</li>
+  </ul>
+
+  <ul ng-repeat="race in races">
+    <li>{{race.round}}</li>
+    <li><img  ng-src="http://rboaventura.com/f1feeder/images/flags/{{race.Circuit.Location.country}}.png" />{{race.raceName}}</li>
+    <li>{{race.Results[0].Constructor.name}}</li>
+    <li>{{race.Results[0].grid}}</li>
+    <li>{{race.Results[0].position}}</li>
+  </ul>
+
+</section>
