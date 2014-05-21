@@ -1,4 +1,4 @@
-F1.controllers.controller('driversController', function($scope, ergastAPIservice) {
+F1.controllers.controller('driversController', function($scope, API) {
   $scope.nameFilter   = null;
   $scope.drivers      = [];
   $scope.searchFilter = function(driver) {
@@ -6,7 +6,7 @@ F1.controllers.controller('driversController', function($scope, ergastAPIservice
     return !$scope.nameFilter || keyword.test(driver.Driver.givenName) || keyword.test(driver.Driver.familyName);
   };
 
-  ergastAPIservice.getDrivers().success(function(data) {
+  API.getDrivers().success(function(data) {
     $scope.drivers = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
   });
 });

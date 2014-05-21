@@ -1,7 +1,7 @@
 F1 = angular.module('F1', [
-  'F1.controllers',
-  'F1.services',
   'ngRoute',
+  'F1.api',
+  'F1.controllers'
 ]).config(['$routeProvider', function($routeProvider) {
   $routeProvider.
     when('/drivers', {templateUrl: "partials/drivers.html", controller: "driversController"}).
@@ -10,4 +10,4 @@ F1 = angular.module('F1', [
 }]);
 
 F1.controllers = angular.module('F1.controllers', []);
-F1.services    = angular.module('F1.services', []);
+F1.api         = angular.module('F1.api', []);
